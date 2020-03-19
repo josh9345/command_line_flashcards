@@ -33,7 +33,11 @@ def game(card):
         return playing
 
 
-def hydra_fail():
+def hydra_fail(card, game):
+    print("after a couple of hours you awaken to find yourself caught in the web of a great spider \n")
+    print("No matter how you struggle you cant seem to free yourself.....Many hours pass when an old man withered from age walking along with his mule. \n")
+    print("'You're in luck!' the man yells 'I can free you' hey says 'but you must have the answer too my question'")
+    game(card)
 
 
 print('you stumble upon a sleeping dragon you must attempt to sneak past it. \n')
@@ -44,10 +48,11 @@ if playing == 0:
 else:
     print(" \n You gracefully tiptoe through the dark cave and escape into the night \n \n ")
 
-print("After hours of walking you stumble upon a waterfall cascading down the side of mountain \n")
-print("the water begins to tremble from its depths emerge a mighty hydra")
+print("After hours of walking you stumble upon a waterfall cascading down the side of mountain, and a lake encircled by torches \n")
+print("the water begins to tremble, from its depths emerge a mighty hydra!")
 game(card)
 if playing == 0:
-    hydra_fail()
+    print("You run to your right in an attempt to flank the beast, the hydra lashes out with one of its heads, narrowly avoiding death you are struck in the chest and sent tumbling down the mountain side")
+    hydra_fail(card, game)
 else:
     print(" \n You gracefully tiptoe through the dark cave and escape into the night \n \n ")
