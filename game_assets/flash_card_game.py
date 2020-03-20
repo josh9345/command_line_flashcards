@@ -44,7 +44,7 @@ def hydra_fail(card, game):
     else:
         print("With a small knife that seems to lighty glow the man swiftly cuts you free, he shakes your hand and continues on his way\n")
         print("Just in time, as you stand you see the great spider fall from the tree top, you turn but the old man is gone\n")
-        print("You turn and run as fast as you can, you feel the air burn in your lungs, you run until you reach a clearing, you see a 'clearly' long forgotten bridge, as you cross the bridge the hand rail on the right begins to unravel!\n\n)
+        print("You turn and run as fast as you can, you feel the air burn in your lungs, you run until you reach a clearing, you stop to catch your breath and you see a 'clearly' long forgotten bridge, as you cross the bridge the hand rail on the right begins to unravel!\n\n")
 
 
 print('you stumble upon a sleeping dragon you must attempt to sneak past it. \n')
@@ -73,3 +73,10 @@ else:
         print("You continue down the mountain, after walking for a while you pass an old man withered with age, he smiles and says 'be carefull, the persuer will be looking for you, good luck'\n\n")
         print("'The persuer? what could that mean' you think while descending the mountain....you come to a 'clearly' long forgotten bridge, as you cross the bridge the hand rail on the right begins to unravel!\n\n")
 game(card)
+if playing == 0:
+    print("You reach out to grab the handrail as the bridge rolls on its side, your grip fails you and you are thrown into the abyss.....you die three days later still falling\n")
+    exit()
+else:
+    print("As the bridge flips on its side you reach out and grab the remaining handrail, you're nearly tossed off but you keep your grip \n")
+    print("You spend the next 45 minutes walking what can now be considered a tight rope to the other side \n")
+    print("With your feet back on solid ground you continue your trip down the mountain")
