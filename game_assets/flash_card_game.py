@@ -38,6 +38,11 @@ def hydra_fail(card, game):
     print("No matter how you struggle you cant seem to free yourself.....Many hours pass when an old man withered from age walking along with his mule. \n")
     print("'You're in luck!' the man yells 'I can free you' hey says 'but you must have the answer too my question'")
     game(card)
+    if playing == 0:
+        print("The man simply shakes his head and walks away, the web begins to vibrate, you look back just in time to see the great spider bring its fangs down...maybe next time")
+        exit()
+    else:
+        print("With a small knife that seems to lighty glow the man swiftly ")
 
 
 print('you stumble upon a sleeping dragon you must attempt to sneak past it. \n')
@@ -55,4 +60,9 @@ if playing == 0:
     print("You run to your right in an attempt to flank the beast, the hydra lashes out with one of its heads, narrowly avoiding death you are struck in the chest and sent tumbling down the mountain side")
     hydra_fail(card, game)
 else:
-    print(" \n You gracefully tiptoe through the dark cave and escape into the night \n \n ")
+    print(" \n The hydra lashes out, you you dive to the ground narrowly avoiding death, you grab a torch...the beast lunges towards you this is your only chance to survive \n \n ")
+game(card)
+if playing == 0:
+    print()
+else:
+    print()
