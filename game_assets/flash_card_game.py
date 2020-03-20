@@ -36,14 +36,15 @@ def game(card):
 def hydra_fail(card, game):
     print("after a couple of hours you awaken to find yourself caught in the web of a great spider \n")
     print("No matter how you struggle you cant seem to free yourself.....Many hours pass when an old man withered from age walking along with his mule. \n")
-    print("'You're in luck!' the man yells 'I can free you' hey says 'but you must have the answer to my question'")
+    print("'You're in luck!' the man yells 'I can free you' hey says 'but you must have the answer to my question'\n")
     game(card)
     if playing == 0:
         print("The man simply shakes his head and walks away, the web begins to vibrate, you look back just in time to see the great spider bring its fangs down...maybe next time")
         exit()
     else:
-        print("With a small knife that seems to lighty glow the man swiftly cuts you free, he shakes your hand and continues on his way ")
-        print("Just in time, as you stand you see the great spider fall from the tree top, you turn but the old man is gone")
+        print("With a small knife that seems to lighty glow the man swiftly cuts you free, he shakes your hand and continues on his way\n")
+        print("Just in time, as you stand you see the great spider fall from the tree top, you turn but the old man is gone\n")
+        print("You turn and run as fast as you can, you feel the air burn in your lungs, you run until you reach a clearing, you see a 'clearly' long forgotten bridge, as you cross the bridge the hand rail on the right begins to unravel!\n\n)
 
 
 print('you stumble upon a sleeping dragon you must attempt to sneak past it. \n')
