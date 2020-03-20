@@ -9,7 +9,7 @@ db = PostgresqlDatabase('cards', user='postgres',
 card = list(Card.select())
 random.shuffle(card)
 counter = 0
-print("\n \n \n \n \n \n \n \n \n \n Hello welcome to trivia night, have fun and good luck! \n")
+print("\n \n \n \n \n \n \n \n \n \n Hello welcome to the trivia dungeon, have fun and good luck! \n")
 # input("would you like to play the game or create some trivia cards of your own? enter 'game' or 'create' \n")
 
 
@@ -36,13 +36,14 @@ def game(card):
 def hydra_fail(card, game):
     print("after a couple of hours you awaken to find yourself caught in the web of a great spider \n")
     print("No matter how you struggle you cant seem to free yourself.....Many hours pass when an old man withered from age walking along with his mule. \n")
-    print("'You're in luck!' the man yells 'I can free you' hey says 'but you must have the answer too my question'")
+    print("'You're in luck!' the man yells 'I can free you' hey says 'but you must have the answer to my question'")
     game(card)
     if playing == 0:
         print("The man simply shakes his head and walks away, the web begins to vibrate, you look back just in time to see the great spider bring its fangs down...maybe next time")
         exit()
     else:
-        print("With a small knife that seems to lighty glow the man swiftly ")
+        print("With a small knife that seems to lighty glow the man swiftly cuts you free, he shakes your hand and continues on his way ")
+        print("Just in time, as you stand you see the great spider fall from the tree top, you turn but the old man is gone")
 
 
 print('you stumble upon a sleeping dragon you must attempt to sneak past it. \n')
@@ -61,8 +62,13 @@ if playing == 0:
     hydra_fail(card, game)
 else:
     print(" \n The hydra lashes out, you you dive to the ground narrowly avoiding death, you grab a torch...the beast lunges towards you this is your only chance to survive \n \n ")
+    game(card)
+    if playing == 0:
+        print("A small mistep is all it takes the hydra sinks its teeth in.....this is the end for you adventurer")
+        exit()
+    else:
+        print("You side step the beasts attack, thrusting the torch into its eye...the hydra lets out a mighty roar, you make a break for it and run to the edge of the mountain the only way out is to slide down....so down you go\n\n ")
+        print("You reach the bottom no worse for wear, you notice the web of a great spider a few feet away.. you were lucky to have missed it \n\n")
+        print("You continue down the mountain, after walking for a while you pass an old man withered with age, he smiles and says 'be carefull, the persuer will be looking for you, good luck'\n\n")
+        print("'The persuer? what could that mean' you think while descending the mountain....you come to a 'clearly' long forgotten bridge, as you cross the bridge the hand rail on the right begins to unravel!\n\n")
 game(card)
-if playing == 0:
-    print()
-else:
-    print()
