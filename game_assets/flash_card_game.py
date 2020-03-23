@@ -10,6 +10,8 @@ db = PostgresqlDatabase('cards', user='postgres',
 card = list(Card.select())
 random.shuffle(card)
 counter = 0
+castle = input(
+    "Would you like to try the doors or go around the castle?\n\nPress 1 for the doors\nor\npress 2 to go around\n")
 print("\n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n\n \n \n \n \n \n \n \n \n \n Hello welcome to the trivia dungeon, have fun and good luck! \n")
 # input("would you like to play the game or create some trivia cards of your own? enter 'game' or 'create' \n")
 
@@ -18,8 +20,9 @@ def game(card):
     global playing
     global counter
     print("Quickly answer this question to decide your fate ")
-    print(f"\n{card[counter].front}")
-    choice = input(" \nTake your best guess \n")
+    time.sleep(3)
+    print(f"\n{card[counter].front}\n\n")
+    choice = input("\nTake your best guess \n")
     print('\n')
     if choice == card[counter].back:
         playing = True
@@ -48,7 +51,7 @@ def hydra_fail(card, game):
         time.sleep(2)
         exit()
     else:
-        print("With a small knife that seems to lighty glow the man swiftly cuts you free, he shakes your hand and continues on his way\n")
+        print("With a small knife that seems to glow slighty the man swiftly cuts you free, he shakes your hand and continues on his way\n")
         time.sleep(4)
         print("Just in time, as you stand you see the great spider fall from the tree top, you turn but the old man is gone\n")
         time.sleep(4)
@@ -56,11 +59,15 @@ def hydra_fail(card, game):
         time.sleep(4)
 
 
+def around_castle:
+    print("")
+
+
 print('you stumble upon a sleeping dragon you must attempt to sneak past it. \n')
 time.sleep(2)
 game(card)
 if playing == 0:
-    print('You accidentily step on a twig and are swiftly fried...medium rare i believe \n \n')
+    print('You accidentally step on a twig and are swiftly fried...medium rare i believe \n \n')
     time.sleep(2)
     exit()
 else:
@@ -107,4 +114,43 @@ else:
     time.sleep(5)
     print("You see a small castle in the distance....you start towards it to investigate")
     time.sleep(5)
-    print("Upon reaching the castle you notice faint wisps of smoke from behind the walls.....somethings not right")
+    print("Upon reaching the castle you notice faint wisps of smoke from behind the walls.....somethings not right\n\n")
+castle
+if castle == "1":
+    print("You quickly close the distance between you and the gate, a guard lays dead at the door, you quickly pick up his sword and step through the gate")
+    time.sleep(6)
+    print("Inside the walls you discover a horrific sight...a massacre not a living soul in sight, who could do such a thing?\n")
+    time.sleep(5)
+    print("Following the trail of destruction leads to the town center....a familiar face stands before you, the old man from the mountain path\n")
+    time.sleep(7)
+    print("Gone is the friendly smile from before in its place an evil grin begins to form, the small knife in his hand flashes like a bolt of lightning,\nyou open your eyes to see the man no longer old and frail instead he looks as though he belongs on mount olympus with a giant blue sword now in his hand.\n")
+    time.sleep(8)
+    print("the man charges, like a blur in an instant he stands before you sword raised ready to deliver the death blow\n")
+    game(card)
+    if playing == 0:
+        print("You reach for your sword but he is too fast...your sword never clears its sheath, you are cut cleanly in two")
+        exit()
+    else:
+        print("You leap backwards, the sword narrowly misses its mark, as you stand the man delivers a mighty kick sending you sliding across the courtyard, you struggle to your feet, the man leaps towards you sword raised\n")
+        time.sleep(8)
+        game(card)
+        if playing == 0:
+            print("You manage to draw your sword just in time to see your arm removed from your body....\n\nMaybe next time adventurer")
+            exit()
+        else:
+            print("You pick up a discarded spear and throw it an instant before he lands, he twists his body and dodges the attack but it does the trick, you swiftly move in for the kill\n")
+            game(card)
+            if playing == 0:
+                print("You lunge towards him.... a sharp pain in your chest tells you that you were too slow.......You were so close, maybe next time\n")
+                exit()
+            else:
+                print(
+                    "You lunge towards him, he thrusts his sword you raise yours just in time to deflect the blow\n")
+                time.sleep(6)
+                print("You can now see the fear in his eyes he knows this is his end, your aim is true the sword pierces his heart, he staggers back and begins changing into the old man you saw before\n")
+                time.sleep(6)
+                print("he stands before you withered and frail, shows a faint smile and collapses........\n Now you may rest but your journey isn't over yet.")
+
+else:
+    # around_castle
+    pass
